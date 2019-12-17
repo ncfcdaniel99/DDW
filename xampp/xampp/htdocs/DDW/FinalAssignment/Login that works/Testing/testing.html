@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Automobile Trader</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-dark fluid">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="testing.php">
+    <img src="logo.png" alt="logo" style="width:80px;">
+  </a>
+  
+  <div class >
+ <h1> Automobile Trader </h1>
+  </div>
+  <!-- Links -->
+  
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="testing.php">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="searchCars.php">Search Cars</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+	
+	    <li class="nav-item">
+      <a class="nav-link" href="Admin/adminlocked.php">Admin</a>
+    </li>
+	
+
+  </ul>
+</nav>
+
+<div class="cardeals" id="cardeals">
+  <div class="container">
+  <h1>Latest Car Deals</h1>
+    <div class="row">
+	
+	
+	
+	
+      <?php 
+      require 'config.php';
+      $sqlQuery=$pdo->query('SELECT * FROM cars  ORDER BY RAND() DESC LIMIT 3');
+      while($row = $sqlQuery->fetch())
+      {
+        ?>
+		
+		
+		
+		<style>
+      * {
+      box-sizing: border-box;
+      }
+      .slider {
+      width: 300px;
+      text-align: center;
+      overflow: hidden;
+      }
+      .slides {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      }
+      .slides::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      }
+      .slides::-webkit-scrollbar-thumb {
+      background: #666;
+      border-radius: 10px;
+      }
+      .slides::-webkit-scrollbar-track {
+      background: transparent;
+      }
+      .slides > div {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      width: 300px;
+      height: 300px;
+      margin-right: 50px;
+      border-radius: 10px;
+      background: #eee;
+      transform-origin: center center;
+      transform: scale(1);
+      transition: transform 0.5s;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+      }
+      .slider > a {
+      display: inline-flex;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: white;
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 0 0.5rem 0;
+      position: relative;
+      }
+      .slider > a:active {
+      top: 1px;
+      color: #1c87c9;
+      }
+      .slider > a:focus {
+      background: #eee;
+      }
+      /* Don't need button navigation */
+      @supports (scroll-snap-type) {
+      .slider > a {
+      display: none;
+      }
+      }
+      html, body {
+      height: 100%;
+      overflow: hidden;
+      }
+      body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #1c87c9, #ffcc00);
+      font-family: 'Ropa Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <a href="#slide-1">1</a>
+      <a href="#slide-2">2</a>
+      <a href="#slide-3">3</a>
+      <a href="#slide-4">4</a>
+      <a href="#slide-5">5</a>
+      <div class="slides">
+        <div id="slide-1">1</div>
+        <div id="slide-2">2</div>
+        <div id="slide-3">3</div>
+        <div id="slide-4">4</div>
+        <div id="slide-5">5</div>
+      </div>
+    </div>
+		
+		
+		
+		
+	
+		
+	  <div class="courseimage">
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <img a href="testing.php" class="image"  src="<?php echo 'pictures/'.$row['picture'];?>" alt="Car">
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+          
+
+      <div class="courseimage">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+      <img class="image"   src="<?php echo 'pictures/'.$row['picture'];?>" alt="Car">
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+	
+	
+	
+       <div class="card" >
+        <div class="card">
+          <div class="card-img-top">
+            <img class ="card-img-top" src="<?php echo 'pictures/'.$row['picture'];?>" >  
+          </div >
+          <div class="card-body">
+            <h4 class="card-title"><?php echo $row['make']." ".$row['model']; ?><span class="badge  badge-info">New</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge  badge-success"><?php echo '£'.$row['price']; ?></span>  </h4>
+            
+            <p class="card-text"><?php echo $row['colour'].' | '.$row['description'].' | '.$row['miles'].' | '.$row['town']; ?></p>
+          </div>
+          <div class="card-footer">
+            <a href='<?php echo "viewCarDetails.php?carIndex=".$row['carIndex'].""; ?>' class="btn btn-primary stretched-link">View</a>
+          </div>  
+        </div>
+      </div>
+      <?php } ?> 
+      
+    </div> 
+  </div>  
+</div>
+
+<?php
+
+
+
+
+while($row = $sqlQuery->fetch())
+
+{
+ 
+
+
+    echo "<align = center><img class =CarImage src='pictures/".$row['picture']."'";
+
+    ?>
+    <div class="carinfo">    
+      <?php
+
+
+	echo "<div class= carinfo><align = center>Make: ".$row['make']."<br>";
+
+	echo "<align = center>Model: ".$row['model']."<br>";
+
+	echo "<align = center>Colour: ".$row['colour']."<br>";
+
+	echo "<align = center>Region: ".$row['region']."<br>";
+
+	echo "<align = center>Town: ".$row['town']."<br>";
+
+
+  echo "<align = center>Reg: ".$row['Reg']."<br><br>" ;
+  echo " <div class=button onclick=location.href='locked.php?carIndex=".$row['carIndex']."'>Buy a car</div>";
+
+
+
+	echo"";
+
+
+echo "<TR>";
+  }
+
+?>
+
+
+
+<script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("courseimage");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+</body>
+</html>

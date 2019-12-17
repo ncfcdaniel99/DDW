@@ -1,0 +1,31 @@
+.jumbotron h1{
+    color: #0d47a1;
+
+}
+
+.logo{
+pad-right:100px;
+}
+.jumbotron {
+	background-color: #b71c1c;
+	margin-bottom:1px;
+}
+
+.navbar{
+		background-color: #b71c1c;
+
+}.navbar-nav{
+	  
+
+}
+
+.container{
+	width: 600px;
+margin-left:10px;
+margin-bottom:100px;
+}
+
+.form{
+	margin-top:10px;
+
+}

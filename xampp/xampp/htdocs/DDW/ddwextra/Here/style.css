@@ -1,0 +1,47 @@
+.formcontent{
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  height: 300px;
+ 
+}
+h2{
+	color: green;
+	text-transform: uppercase;
+	font-weight: 2rem;
+}
+input{
+	width: 60px;
+	border: 1px solid green;
+}
+#searchBtn{
+  background-color: white; 
+  width: 75px;
+  height: 25px;
+  color: black; 
+  border: 2px solid #4CAF50;
+  margin-left: 10px;
+  border: none;
+  border-radius: 12px;
+   text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+    border: 2px solid #4CAF50;
+	
+}
+#searchBtn:hover{
+	background-color: #4CAF50;
+    color: white;
+	margin-left: 10px;
+	border: none;
+	border-radius: 12px;
+	text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+	
+}
+

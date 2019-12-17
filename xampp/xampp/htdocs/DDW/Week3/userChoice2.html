@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Car Picker</title>
+</head>
+<body>
+<h4>Car Picker through dropbox</h4>
+<form action="databaseTemplate4.php" method="post"> 
+
+Car Make: <input type="text" name="make" size=12 ><br>
+Car Model: <input type="text" name="model" size=12><br>
+<select>
+    <?php 
+	require ("config.php");
+	$sql="select * from cars";
+	try
+	{
+		$stmt=$pdo->prepare($sql);
+		$stmt->execute();
+		$results=$stmt->fetchAll();
+	}
+	foreach($results as $make): ?>
+       <?php echo ' <option value="<?php $make['id']; ?>">'. $make['make'].'</option>'; ?>
+    <?php endforeach; ?>
+</select>
+
+<input type="submit" name="carsearch" size =12>
+
+</form>
+
+</body>
+</html>

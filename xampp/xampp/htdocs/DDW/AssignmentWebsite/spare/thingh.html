@@ -1,0 +1,28 @@
+<button class="refresher">Refresh table</button>
+<table id="table-to-refresh">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $(document).on('click', '.refresher', function () {
+        $.ajax({
+            url: 'ajax.php',
+            method: get,
+            dataType: 'json',
+            success: function(response) {
+                $('#table-to-refresh').html(response);
+            }
+        });
+    });
+});
+</script>

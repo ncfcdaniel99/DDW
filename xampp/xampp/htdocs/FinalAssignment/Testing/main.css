@@ -1,0 +1,103 @@
+.navbar-nav{
+	margin-left:300px;
+		background-color: #7f0000;
+		color: white;
+
+
+}
+.purchase
+{
+	width:200px;
+}
+.navbar-brand{
+	margin-left:10px;
+			background-color: #7f0000;
+color: white;
+
+}
+
+.heading{
+	text-align:center;
+}
+.navbar{
+
+			background-color: #7f0000;
+color: white;
+}
+
+
+
+.form{
+	margin-top:100px;
+
+}
+
+.table{
+	margin-left:100px;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color:  #7f0000;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  height:60px;
+}
+.row{
+padding-left:-200px;
+}
+.col-sm-3
+{
+	margin-right:50px;
+	padding-top:20px
+}
+.container{
+	width:500px;
+}
+.outputresults{
+	padding-left:400px;
+	padding-top:30px;
+}
+
+.filtercars{
+margin-left:50px;
+margin-top:60px;}
+
+td {
+	font-size:30px;
+ padding: 10px 0
+}
+
+.btn-group button {
+    background-color:  #7f0000;  border: 1px solid white; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+margin-top:50px;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-info
+
+{
+	margin-left:30px !important;
+  background-color: #8064A2 !important;
+}
+
+ul.pagenumbering {
+  
+}

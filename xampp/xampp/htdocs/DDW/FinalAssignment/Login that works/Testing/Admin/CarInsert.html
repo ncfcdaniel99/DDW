@@ -1,0 +1,96 @@
+<head>
+  <title>Automobile Trader</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark fluid">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="">
+    <img src="logo.png" alt="logo" style="width:80px;">
+  </a>
+  
+  <div class >
+ <h1> Automobile Trader </h1>
+  </div>
+  <!-- Links -->
+  
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.php">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="carResult.php">Search Cars</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+	
+    <li class="nav-item">
+	 <?php
+    if(!isset($_SESSION['auth']))
+    {
+    ?>
+    <a class="nav-link" href="adminlogin.php">Admin Login</a> 
+    <?php
+    }
+    else
+    {
+    ?>
+    <a class="nav-link" href="adminlogout.php">Admin Logout</a>
+    <?php
+     }
+    ?>
+    <?php
+    if(isset($_SESSION['success']))
+    {
+    ?>
+    <div class="success">
+
+    </div>
+    <?php
+    unset($_SESSION['success']) ;
+    }
+    if(isset($_SESSION['failure']))
+    {
+    ?>
+    <div class="failure">
+    <?php echo $_SESSION['failure'] ;?>
+    </div>
+    <?php
+    unset($_SESSION['failure']) ;
+    }
+    ?>
+</li>
+  </ul>
+</nav>
+
+
+<form action="insertCar.php" method="post"> 
+
+Car Make: <input type="text" class="form-control" name="make" size=12 ><br>
+Car Model: <input type="text" class="form-control" name="model" size=12><br>
+Car Reg: <input type="text" class="form-control" name="reg" size=12><br>
+Colour: <input type="text" class="form-control" name="colour" size=12><br>
+Miles: <input type="text" class="form-control" name="miles" size=12><br>
+Price: <input type="text" class="form-control" name="price" size=12><br>
+Dealer: <input type="text" class="form-control" name="dealer" size=12><br>
+Town: <input type="text" class="form-control" name="town" size=12><br>
+Telephone: <input type="text" class="form-control" name="telephone" size=12><br>
+Description: <input type="text" class="form-control" name="description" size=12><br>
+Region: <input type="text" class="form-control" name="region" size=12><br>
+Picture: <input type="text" class="form-control" name="picture" size=12><br>
+
+
+
+<input type="submit" name="carsearch" size =12>
+ 
+</form>
+
+</body>
+</html>

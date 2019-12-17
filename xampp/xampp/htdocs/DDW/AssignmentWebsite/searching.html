@@ -1,0 +1,26 @@
+<?php $sql = "SELECT * FROM cars";
+$result = mysql_query($sql);
+?>
+<select id="make" name='make' onchange="updatesearch();">
+<option value=''>Select</option>
+<?php while ($row = mysql_fetch_array($result)) {
+   echo ' <option value="'. $make["make"].'">'. $make["make"].'</option>';}
+?>
+</select>
+<div id="model"></div> // Sub will be appended here using ajax
+
+ <script type="text/javascript">
+function updatesearch() { // Call to ajax function
+    var make = $('#make').val();
+    var dataString = "make="+make;
+    $.ajax({
+        type: "POST",
+        url: "searchupdate.php", // Name of the php files
+        data: dataString,
+        success: function(html)
+        {
+            $("#get_make").html(html);
+        }
+    });
+}
+</script>

@@ -1,0 +1,361 @@
+
+
+body {
+	background-image: url("carimage.jpg" );
+        background-repeat:no-repeat;
+       background-size:cover;
+
+      } 
+
+
+
+.breadcrumb {
+  background-color: #CB9999 !important;
+
+  color: #ddd !important;
+}
+.navbar-nav{
+	margin-left:300px;
+		background-color: #7f0000;
+		color: white;
+
+
+}
+.purchase
+{
+	width:200px;
+}
+.navbar-brand{
+	margin-left:10px;
+			background-color: #7f0000;
+color: white;
+
+}
+.card-img-top {
+  width: 50px;
+  height: 200px;
+  object-fit: contain;
+}
+.CarImage{
+  padding-left: 20px;
+  width:400px;
+  height: 400px;
+}
+
+.carinfo{
+
+  padding-left:700px;
+  margin-top: -300px;
+}
+
+.button
+{
+  background-color: #7f0000;
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor:pointer;
+  height:50px;
+  width: 150px;
+}
+
+.resultbutton{
+  
+  background-color: #7f0000;
+  color: white;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  margin-left : 650px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor:pointer;
+  height:50px;
+  width: 120px;
+  text-align: center;
+}
+
+.purchasebutton{
+  
+  background-color: #7f0000;
+  color: white;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor:pointer;
+  height:50px;
+  width: 120px;
+  text-align: center;
+}
+.heading{
+	text-align:center;
+}
+.navbar{
+
+			background-color: #7f0000;
+color: white;
+}
+
+
+
+.form{
+	margin-top:100px;
+
+}
+
+.table{
+	margin-left:100px;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color:  #7f0000;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  height:60px;
+}
+.row{
+padding-left:-200px;
+}
+.col-sm-3
+{
+	margin-right:50px;
+	padding-top:20px
+}
+.container{
+}
+.outputresults{
+	padding-left:100px;
+	padding-top:30px;
+}
+
+.filtercars{
+margin-left:50px;
+margin-top:60px;}
+
+td {
+	font-size:30px;
+ padding: 10px 0
+}
+
+.btn-group button {
+    background-color:  #7f0000;  border: 1px solid white; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+margin-top:50px;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-info
+
+{
+	margin-left:30px !important;
+  background-color: #8064A2 !important;
+}
+.pagination {
+  display: inline-block;
+
+}
+
+.pagination a {
+  background-color: #7f0000;
+  color:white;
+  float: left;
+  padding-left: 5px;
+  padding: 8px 16px;
+  text-decoration: none;
+ 
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active)
+{background-color: yellow;}
+
+.pagination a:hover
+{background-color: green;}
+
+    .form-control{
+    width:200px !important;
+	display:inline !important;
+	}
+	
+
+.courseimage{
+  padding-left:10px;
+  padding-right:50px;	 
+
+  
+}
+
+.insuranceimages{
+  width:100px;
+height:100px;
+}
+.carimage{
+	margin-left:50px;
+  padding-right:50px;
+width:400px;
+height:400px;
+
+}
+.prev, .next {
+  cursor: pointer;
+
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  max-width: 50%;
+  height: auto;
+}
+
+.next {
+
+
+  border-radius: 3px 0 0 3px;
+}
+/* Title */
+.title {
+  font-size: 18px;
+  margin: 0;
+  color: #5e6977;
+}
+
+
+/* Common */
+.card-number,
+.cvv-input input,
+.month select,
+.year select {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 14px;
+}
+ 
+.card-number,
+.month select,
+.year select {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 14px;
+}
+ 
+.card-number,
+.cvv-details,
+.cvv-input input,
+.month select,
+.year select {
+    opacity: .7;
+    color: #86939e;
+}
+
+/* Card Number */
+.card-number {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 2px solid #e1e8ee;
+  border-radius: 6px;
+}
+
+/* Date Field */
+.month select,
+.year select {
+    width: 145px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+    background: url('caret.png') no-repeat;
+    background-position: 85% 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+ 
+.month select {
+    float: left;
+}
+ 
+.year select {
+    float: right;
+}
+
+/* Card Verification Field */
+.cvv-input input {
+  float: left;
+  width: 145px;
+  padding-left: 20px;
+  border: 2px solid #e1e8ee;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.cvv-details {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+  float: right;
+  margin-bottom: 20px;
+}
+
+.cvv-details p {
+  margin-top: 6px;
+}
+
+/* Buttons Section */
+.paypal-btn,
+.proceed-btn {
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    border-color: transparent;
+    border-radius: 6px;
+}
+ 
+.proceed-btn {
+    margin-bottom: 10px;
+    background: #7dc855;
+}
+ 
+.paypal-btn a,
+.proceed-btn a {
+    text-decoration: none;
+}
+ 
+.proceed-btn a {
+    color: #fff;
+}
+ 
+.paypal-btn a {
+    color: rgba(242, 242, 242, .7);
+}
+ 
+.paypal-btn {
+    padding-right: 95px;
+    background: url('paypal-logo.svg') no-repeat 65% 56% #009cde;
+}

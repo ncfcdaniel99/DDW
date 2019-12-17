@@ -1,0 +1,63 @@
+<?php
+host = 'localhost';
+$db   = 'carsdatabase';
+$user = 'root';
+$pass = '';
+$charset = 'utf8mb4';
+
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+try {
+     $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+     throw new \PDOException($e->getMessage(), (int)$e->getCode());
+}
+
+$stmt = $pdo->prepare('SELECT * FROM cars');
+$stmt->execute();
+
+?>
+<html>
+<head>
+<title>Car Picker</title>
+</head>
+<body>
+<h4>Car Picker through dropbox</h4>
+<form action="databaseTemplate4.php" method="post"> 
+
+<label>Make:</label>
+
+
+<select>
+<?php
+while ($row = $stmt->fetch())
+{
+  
+<option value=".$row['make']" ></option>
+}
+    
+        
+		?>
+   
+</select
+
+<br>
+<br>
+<label>Model</label>
+<select>
+    
+        <option>Select Model</option>
+   
+</select>
+<br>
+<br>
+<input type="submit" name="carsearch" size =12>
+
+</form>
+
+</body>
+</html>

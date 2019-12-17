@@ -1,0 +1,71 @@
+.navbar-nav{
+	margin-left:300px;
+		background-color: #7f0000;color: #7f0000;
+
+}
+.navbar-brand{
+	margin-left:10px;
+			background-color: #7f0000;
+color: #7f0000;
+
+}
+
+.heading{
+	text-align:center;
+}
+.navbar{
+
+			background-color: #7f0000;
+color: green;
+}
+
+
+
+.form{
+	margin-top:100px;
+
+}
+
+.table{
+	margin-left:100px;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color:  #7f0000;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  height:60px;
+}
+.row{
+padding-left:-200px;
+}
+.col-sm-3
+{
+	margin-right:50px;
+	padding-top:20px
+}
+.container{
+	width:500px;
+}
+.outputresults{
+	margin-left:300px;
+	margin-right:500px;
+}
+
+.filtercars{
+margin-left:50px;
+margin-top:60px;}
+
+td {
+	font-size:30px;
+ padding: 10px 0
+}

@@ -1,0 +1,88 @@
+.container-fluid
+{
+    margin: 0000;
+    padding: 0000;
+}
+
+.topnav
+{
+    background-color: #222222;
+    overflow: hidden;
+    padding: 13px 10px 15px 10px;
+    font-size: 18px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.topnav a
+{
+    float: left;
+    text-align: center;
+    padding: 10px 18px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #71db77
+}
+#nav-right
+{
+    margin-left: 1075px;
+}
+.topnav a:hover
+{
+background-color: dimgray;
+color: #71db77
+}
+
+.topnav a:active
+{
+background-color: #71db77;
+color: black;
+}
+
+.logo
+{
+    background-color: #222222;
+    padding: 10px 10px 10px 10px;
+}
+.topnav > a.nav-login
+{
+    float: right;
+}
+
+.bg
+{
+    background: url('../img/gray-slate-background.jpg') no-repeat; width: 100%; height: 100vh;
+}
+.bgi
+{
+    background: url('../img/gray-slate-background-invert.jpg') no-repeat; width: 100%; height: 100vh;
+}
+
+.bd-example
+{
+    padding: 170px 330px 00;
+    background-color: transparent;
+}
+
+
+
+.carousel-caption
+{
+    font-size: 18px;
+    color: white;
+    background-color: rgba(34, 34, 34, 0.5);
+}
+
+
+.footer
+{
+    background-color: #222222;
+    color: #71db77;
+}
+
+.table.th
+{
+     color: white;
+}
